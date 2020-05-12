@@ -12,28 +12,25 @@
 
    <?php
 
-   $valor1 = $_POST['nota1'];
+   $parcial1 = $_POST['nota1'];
+   $parcial2 = $_POST['nota2'];
+   $parcial3 = $_POST['nota3'];
+   $ExamenFinal = $_POST['nota4'];
+   $TrabajoFinal = $_POST['nota5'];
 
-   $valor2 = $_POST['nota2'];
+   $promedioParciales = ($parcial1 + $parcial2 + $parcial3) / 3; 
 
-   $valor3 = $_POST['nota3'];
 
-   $valor4 = $_POST['nota4'];
+   $porcentajeParciales= $promedioParciales*0.35;
+   $porcentajeExamen=$ExamenFinal*0.35;
+   $porcentajeTrabajo=$TrabajoFinal*0.30;
+   $notaFinal=$porcentajeParciales+$porcentajeExamen+$porcentajeTrabajo;
 
-   $valor5 = $_POST['nota5'];
-
-   $prompar = ($valor1 + $valor2 + $valor3 / 3);
-
-   $parte1 = ($prompar * 0.35);
-   $parte2 = ($valor4 * 0.35);
-   $parte3 = ($valor5 * 0.30);
-
-   $notafinal = ($parte1 + $parte2 + $parte3) / 3;
-
-   if ($notafinal >= 3.0) {
-      echo "tu nota final es: $notafinal, aprobaste";
+  
+   if ($notaFinal >= 3.0) {
+      echo "tu nota final es: $notaFinal, aprobaste";
    } else {
-      echo "tu nota final es: $notafinal, no aprobaste";
+      echo "tu nota final es: $notaFinal, no aprobaste";
    };
 
    ?>
@@ -44,3 +41,4 @@
 </body>
 
 </html>
+

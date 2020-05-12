@@ -11,14 +11,13 @@
 <body>
 
     <?php
-    $sb = 450000;
     $nomb = $_POST['nombre'];
     $cant = $_POST['cantidad'];
     $total = $_POST['total'];
 
-    $comision = $cant * $sb;
+    $comision = $cant * 50000;
     $por = ($total * 0.05);
-    $res = $comision +  $por;
+    $res = $comision +  $por + 450000;
 
     echo  "El pago de este mes del empleado $nomb es igual a $res de pesos";
 

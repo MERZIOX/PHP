@@ -20,9 +20,7 @@
         <li><button><a href="indicemasacorporal.php"> Calcular IMC </a></button></li>
         <li><button><a href="presuphospital.php"> Calcular presupuesto hospitalario </a></button></li>
         <li><button><a href="descuento.php"> Calcular descuento de un producto </a></button></li>
-
-
-
+       
 
     </ul>
 
